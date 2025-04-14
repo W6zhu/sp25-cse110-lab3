@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Meeting Minutes </title>
+    <meta charset="UTF-8">
+    <meta name = "Lab Completion Date" content="4/14/25">
+  </head>
+  <body>
+    <header>
+        <h1>Company Name</h1>
+        <h3>Timer First Brainstorm</h3>
+        <p> Date:</p>
+    </header>
+    <hr>
+
+    <nav>
+        <a href = "#attendance"> Attendance</a> <br>
+        <a href = "#agenda" > Agenda</a> <br>
+        <a href = "#unfinished-business" > Unfinished Business</a> <br>
+        <a href = "#new-business" > New Business</a> <br>
+        <a href = "#summary" > Summary of Meeting</a> <br>
+        <a href = "#qna" > Questions/Comments/Concern</a> <br>
+    </nav> 
+    <hr>
+
+    <main>
+        <section id = "attendance">
+            <h2>Attendance</h2>
+                <ul>
+                    <li>Thing 1</li>
+                    <li>Thing 2</li>
+                </ul>
+        </section>
+
+        <section id = "agenda">
+            <h2>Agenda</h2>
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                </ol>
+        </section>
+        
+        <section id = "unfinished-business">
+            <h2>Unfinished Business</h2>
+                <ul>
+                    <li>Thing 1</li>
+                    <div>
+                        <p>
+                            <strong>Something about Old Business:</strong>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget dolor viverra, commodo orci eget, pretium augue. Fusce tincidunt efficitur felis non cursus. Nullam ac rutrum leo, dapibus gravida tellus. Sed in turpis eget magna vestibulum laoreet. Curabitur sit amet leo a purus sollicitudin interdum. Integer dignissim mi vel tristique rutrum. Fusce venenatis libero mauris, ut ornare nisi luctus id. Maecenas quam nulla, luctus quis accumsan et, sagittis quis metus.
+                            <br>
+                            <span>Suspendisse finibus odio lobortis pulvinar aliquet. Donec vel interdum elit. Integer porttitor augue lectus, iaculis dignissim dolor ornare ac. Pellentesque id sagittis mauris.</span>
+                        </p>
+                    </div>
+                    <li>Thing 2</li>
+                        <p>
+                            <strong>Some Other Task From Last Time:</strong>
+                            Something something something, refer to the board.
+                            <img src = "whiteboard image.jpg" alt = "Whiteboard from last time">
+                            
+                        </p>
+                </ul>
+        </section>
+
+        <section id = "new-business">
+            <h2>New Business</h2>
+                <ul>
+                    <li>Thing 1</li>
+                        <p>
+                            <strong>Very important:</strong>
+                            Something something very important, <b>X</b> needs to be done by <em>Y</em> else someone will bad will happen. <br>
+                            <i>All hands on deck task</i> 
+                        </p>
+                    <li>Thing 2</li>
+                        <p>
+                            <strong>Something to Please Stakeholders:</strong>
+                            <video>
+                                <source src = "surprise.mp4" type = "video/mp4">
+                            </video>
+                        </p>
+                    <li>Thing 3</li>
+                    <p>
+                        <strong>Something else for Shareholders:</strong>
+                        <audio>
+                            <source src = "suprise audio.mp3" type = "audio/mpeg">
+                        </audio>
+                    </p>
+                </ul>
+        </section>
+
+        <section id = "summary">
+            <h2>Summary of Meeting</h2>
+                <details>
+                    <summary>Stuff that happened during the meeting</summary>
+                        <ul>
+                            <li>Something about old business</li>
+                            <li>Something about new business</li>
+                        </ul>
+                </details>
+        </section>
+
+
+        <section id = "qna">
+            <h2>Questions/Comments/Concern</h2>
+            <form>
+                <fieldset>
+                    <legend>Feedback</legend>
+
+                    <label for="name">Name:</label>
+                    <input type ="text" id = "name" name ="name"><br>
+
+                    <label for="email">Email:</label>
+                    <input type ="text" id = "email" name ="email"><br>
+
+                    <label for = "date">Date:</label>
+                    <input type="date" id = "date"><br>
+
+                    <label>Did you learn?</label> <br>
+                    <input type ="radio" id = "yes" name = "learn?" value = "yes">
+                    <label for ="yes">Yes</label><br>
+                    <input type ="radio" id = "no" name = "learn?" value = "no">
+                    <label for ="no">No</label><br>
+
+                    <label for ="tag">Tag the Meeting</label>
+                    <input list = "tags" id ="tag" name = "tag">
+                    <datalist id = "tags">
+                        <option value = "Urgent"></option>
+                        <option value = "Ehh"></option>
+                        <option value = "Useless"></option>
+                    </datalist> <br>
+
+                    <label for ="rating">Rate the Meeting</label>
+                    <select id = "rating" name = "rating">
+                        <option value = "5">5</option>
+                        <option value = "4">4</option>
+                        <option value = "3">3</option>
+                        <option value = "2">2</option>
+                        <option value = "1">1</option>
+                    </select> <br>
+
+                    <label for ="comments">Comments:</label><br>
+                    <textarea id = "comments" rows ="15" cols ="15"></textarea> <br>
+
+                    <label>
+                        <input type = "checkbox" id ="spam"> Check to be spammed with emails.
+                    </label> <br>
+
+                    <button type = "submit">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Credits to Adobe Stock Images for the whiteboard and Rick Astely for the Video and Audio </p>
+    </footer>
+  </body>
+</html>
