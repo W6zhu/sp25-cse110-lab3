@@ -1,0 +1,31 @@
+/* Variables and fall back */
+:root { 
+    --main-color: hsl(204, 8%, 76%); /* hsl Colors */
+    --fallback-color: #A9A9A9; /* fall back and hex color*/
+  }
+
+/* Font Stuff */
+  body {
+    background-color: var(--main-color, var(--fallback-color)); /* back ground color*/
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header{
+    background-color: rgb(240,240,255);
+  }
+
+  footer {
+    background-color: color(srgb 0.95 0.95 0.95); 
+  }
+
+  #attendance {
+    color: darkblue
+  }
+
+  form {
+    background-color: color-mix(in srgb, white 70%, Gray 10%);
+  }
+
