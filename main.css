@@ -15,6 +15,28 @@
 
   header{
     background-color: rgb(240,240,255);
+    position: sticky;
+    top:0;
+    z-index: 0;
+  }
+
+  nav a{
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: red;
+  }
+  
+  nav a:active {
+    color: green;
+  }
+
+  details {
+    display:block;
+    margin-top:  1rem;
   }
 
   footer {
@@ -33,7 +55,7 @@
     width: 75%;
     height: 500px;
     max-width: 1200px;
-    min-width: none;
+    min-width: 300px;
   }
 
   section {
@@ -77,4 +99,12 @@
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.9);
   }
-
+ 
+  video {
+    position: relative;
+    left: 10px;
+  }
+  
+  form:has(input[type="checkbox"]:checked) {
+    background-color: #fffae6;
+  }
