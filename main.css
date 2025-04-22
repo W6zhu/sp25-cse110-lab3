@@ -101,8 +101,11 @@
   }
  
   video {
-    position: relative;
-    left: 10px;
+    display: block;
+    margin: 1rem auto;
+    width: 85%;
+    max-width: auto;
+    height: auto;
   }
   
   form:has(input[type="checkbox"]:checked) {
