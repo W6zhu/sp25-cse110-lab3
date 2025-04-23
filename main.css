@@ -140,7 +140,7 @@
   }
 
   form {
-    background-color: color-mix( white 70%, Gray 10%);
+    background-color: color-mix(in srgb, white 70%, Gray 10%);
   }
 
   img, video {
@@ -327,7 +327,6 @@
       margin: 0;
       box-sizing: border-box;
       overflow-wrap: break-word;
-      word-break: break-word;
       overflow: hidden;
     }
   
@@ -366,7 +365,6 @@
     details {
       max-width: 100%;
       overflow-wrap: break-word;
-      word-break: break-word;
     }
   
     form,
