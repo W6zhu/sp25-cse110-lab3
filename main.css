@@ -140,7 +140,7 @@
   }
 
   form {
-    background-color: color-mix(in srgb, white 70%, Gray 10%);
+    background-color: color-mix( white 70%, Gray 10%);
   }
 
   img, video {
