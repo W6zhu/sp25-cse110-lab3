@@ -20,6 +20,20 @@
     z-index: 0;
   }
 
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "attendance agenda"
+      "unfinished unfinished"
+      "new new"
+      "summary qna";
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
   nav a{
     display: inline-block;
     padding: 5px 10px;
@@ -40,11 +54,72 @@
   }
 
   footer {
+    display: flex; /*flex box implementation*/
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
     background-color: color(srgb 0.95 0.95 0.95); 
   }
 
+  #attendance,
+  #agenda {
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    border: 2px solid #000;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
   #attendance {
-    color: darkblue
+    color: darkblue;
+    grid-area: attendance;
+  }
+  
+  #agenda {
+    grid-area: agenda;
+  }
+  
+  
+  #unfinished-business {
+    grid-area: unfinished;
+    padding: 1.5rem;
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #new-business {
+    grid-area: new;
+  }
+  
+  #summary {
+    grid-area: summary;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    border: 2px solid #000;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #qna {
+    grid-area: qna;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    border: 2px solid #000;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   form {
@@ -61,19 +136,16 @@
   section {
     padding: 1rem;
     margin: 1rem auto;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.9);
   }
+  
 
   fieldset {
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-  
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-  
+    padding: 10px;
+    margin: 10px auto;
+    
     border-style: dashed;
     border-width: 2px;
     border-color: aquamarine;
@@ -94,17 +166,11 @@
     border: 1px solid red;
   }
   
-  section {
-    border: 2px solid black;
-    border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.9);
-  }
- 
   video {
     display: block;
     margin: 1rem auto;
     width: 85%;
-    max-width: auto;
+    max-width: 1200px;
     height: auto;
   }
   
