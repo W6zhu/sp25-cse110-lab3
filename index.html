@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     
+    <style>
+        h2 {color: darkblue}
+    </style>
+
   </head>
   <body>
     <header>
@@ -40,7 +44,7 @@
                 </ul>
         </section>
 
-        <section id = "agenda">
+        <section class ="important" id = "agenda">
             <h2>Agenda</h2>
                 <ol>
                     <li>Item 1</li>
@@ -110,13 +114,13 @@
                         <legend>Feedback</legend>
 
                         <label for="name">Name:</label>
-                        <input type ="text" id = "name" name ="name"><br>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
 
                         <label for="email">Email:</label>
-                        <input type ="text" id = "email" name ="email"><br>
+                        <input type ="text" id = "email" name ="email" placeholder="Enter email" required><br>
 
                         <label for = "date">Date:</label>
-                        <input type="date" id = "date"><br>
+                        <input type="date" id = "date" required><br>
 
                         <label>Did you learn?</label> <br>
                         <input type ="radio" id = "yes" name = "learn" value = "yes">
@@ -148,7 +152,7 @@
                             <input type = "checkbox" id ="spam"> Check to be spammed with emails.
                         </label> <br>
 
-                        <button type = "submit">Submit</button>
+                        <button class = "special-button" type = "submit">Submit</button>
                     </fieldset>
                 </form>
             </div>
@@ -159,5 +163,6 @@
         <p>Credits to Adobe Stock Images for the whiteboard and Rick Astely for the Video and Audio </p>
         <p>Lab Completed on 4/23/25</p>
     </footer>
+
   </body>
 </html>

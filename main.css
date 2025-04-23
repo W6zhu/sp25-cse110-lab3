@@ -49,11 +49,13 @@
     text-align: center;
   }
 
-  nav a{
+  nav {
+    a{
     display: inline-block;
     padding: 5px 10px;
     text-decoration: none;
   }
+}
 
   nav a:hover {
     color: red;
@@ -201,6 +203,50 @@
     background-color: #fffae6;
   }
 
+  form > fieldset {
+    border-color: lightblue;
+  }
+
+  h2 ~ ul {
+  list-style-type: square;
+  }
+
+  h3 + p {
+    font-style: italic;
+  }
+  section.important h2 {
+    color: red;
+  }
+  fieldset label {
+    font-weight: bold;
+  }
+
+  button.special-button {
+    background-color: navy;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  
+  input[type="text"]:placeholder-shown{
+    background-color: lightpink; /* empty text field */
+  }
+  
+  input[type="text"]:not(:placeholder-shown){
+    background-color: white; /* filled text field */
+  }
+
+  input[type="date"]:invalid {
+    background-color: lightpink;
+  }
+  
+  input[type="date"]:valid {
+    background-color: white;
+  }
+
   @media (max-width: 900px) { /*tablet size*/
     main {
       grid-template-columns: 1fr;
@@ -225,10 +271,12 @@
       text-align: center;
     }
   
-    nav a {
+    nav {
+      a {
       display: block;
       margin: 0.5rem 0;
     }
+  }
   
     footer {
       flex-direction: column;
@@ -296,7 +344,7 @@
     nav a {
       display: block;
       margin: 0.5rem 0;
-    }
+  }
   
     footer {
       flex-direction: column;
