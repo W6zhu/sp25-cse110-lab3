@@ -5,19 +5,30 @@
   }
 
 /* Font Stuff */
-  body {
+  html, body {
     background-color: var(--main-color, var(--fallback-color)); /* back ground color*/
     color: #333;
     font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
   }
+
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
   header{
     background-color: rgb(240,240,255);
     position: sticky;
     top:0;
     z-index: 0;
+    text-align: center;
+    margin: 0.25rem 0;
   }
 
   main {
@@ -32,6 +43,10 @@
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  nav {
+    text-align: center;
   }
 
   nav a{
@@ -126,12 +141,20 @@
     background-color: color-mix(in srgb, white 70%, Gray 10%);
   }
 
-  img {
-    width: 75%;
-    height: 500px;
-    max-width: 1200px;
-    min-width: 300px;
+  img, video {
+    max-width: 100%;
+    height: auto;
   }
+  
+
+  img {
+    width: 100%;       
+    height: auto;
+    display: block;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
 
   section {
     padding: 1rem;
@@ -176,4 +199,138 @@
   
   form:has(input[type="checkbox"]:checked) {
     background-color: #fffae6;
+  }
+
+  @media (max-width: 900px) { /*tablet size*/
+    main {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "attendance"
+        "agenda"
+        "unfinished"
+        "new"
+        "summary"
+        "qna";
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+
+    header h1,
+    header h3 {
+      text-align: center;
+      margin: 0.25rem 0;
+    }
+  
+    nav {
+      text-align: center;
+    }
+  
+    nav a {
+      display: block;
+      margin: 0.5rem 0;
+    }
+  
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+  @media (max-width: 600px) { /*small device like phone*/
+    html, body {
+      overflow-x: hidden;
+    }
+  
+    body {
+      font-size: 0.95rem;
+      margin: 0;
+      padding: 0;
+    }
+  
+    main {
+      padding-inline: 1rem;
+      padding-block: 1rem;
+      margin: 0 auto;
+      max-width: 600px;
+      width: 100%;
+      box-sizing: border-box;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "attendance"
+        "agenda"
+        "unfinished"
+        "new"
+        "summary"
+        "qna";
+    }
+  
+    #attendance,
+    #agenda,
+    #unfinished-business,
+    #new-business,
+    #summary,
+    #qna,
+    section {
+      width: 100%;
+      max-width: 100%;
+      padding: 1rem;
+      margin: 0;
+      box-sizing: border-box;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      overflow: hidden;
+    }
+  
+    header h1,
+    header h3 {
+      text-align: center;
+      margin: 0.25rem 0;
+    }
+  
+    nav {
+      text-align: center;
+    }
+  
+    nav a {
+      display: block;
+      margin: 0.5rem 0;
+    }
+  
+    footer {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      padding-bottom: 2rem;
+    }
+  
+    img,
+    video {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      display: block;
+      box-sizing: border-box;
+    }
+  
+    details {
+      max-width: 100%;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+  
+    form,
+    textarea {
+      width: 100%;
+    }
+  
+    textarea {
+      min-width: 100%;
+    }
+  
+    legend {
+      font-size: 1rem;
+    }
   }
