@@ -14,12 +14,12 @@
 - All new and current announcements go here
 - Ex: Deadline moved X Days
 - XYZ
----
+
 
 ## Materials
 - Any relevant materials goes here. 
 - XYZ
----
+
 
 ## Updates
 
